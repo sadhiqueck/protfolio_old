@@ -15,7 +15,16 @@
     hideDistantElements: false,
     scrollProperty: 'scroll'
   });
-
+if ($(window).width() > 768) { // Enable Stellar.js only on larger screens
+    $(window).stellar({
+        responsive: true,
+        parallaxBackgrounds: true,
+        parallaxElements: true,
+        horizontalScrolling: false,
+        hideDistantElements: false,
+        scrollProperty: 'scroll'
+    });
+}
 
 	var fullHeight = function() {
 
@@ -91,7 +100,7 @@
 	    animateOut: 'fadeOut',
 	    animateIn: 'fadeIn',
 	    nav:false,
-	    autoplayHoverPause: false,
+	    autoplayHoverPause: true,
 	    items: 1,
 	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
 	    responsive:{
